@@ -27,6 +27,7 @@ try {
     if (row && !row.startsWith('#')) {
       global_var = row.split("=")
       core.exportVariable(global_var[0], global_var[1]);
+      core.setSecret(global_var[1]);
     }
   });
 } catch (error) {
